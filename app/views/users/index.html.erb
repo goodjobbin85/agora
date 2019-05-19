@@ -1,0 +1,12 @@
+<h1 align="center">All Our Current Users</h1>
+
+<h4 align="center"><%= @users.count %> users</h4>
+<table align="center">
+    <% @users.each do |user| %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.username %></td>
+        </tr>
+    <% end %>
+</table>
