@@ -1,6 +1,7 @@
 <h1 align="center">All Our Current Users</h1>
 
 <h4 align="center"><%= @users.count %> users</h4>
+<h3 align="center"><%= link_to "Add User", new_user_path %></h3>
 <table align="center">
     <% @users.each do |user| %>
         <tr>
