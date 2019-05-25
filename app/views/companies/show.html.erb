@@ -1,0 +1,22 @@
+<div align="center">
+    <p>
+        <%= @company.name %>
+    </p>
+    <p>
+        <%= @company.email %>
+    </p>
+    <p>
+        <%= @company.phone %>
+    </p>
+    <p>
+        <%= @company.description %>
+    </p>
+    <p>
+        <%= @company.year_established %>
+    </p>
+    
+    <%= link_to "Contact Us", "#" %>
+    <%= link_to "Edit", edit_company_path(@company) %>
+    <%= link_to "Delete", company_path(@company), method: :delete, 
+                          data: { confirm: "Are you sure?" } %>
+</div>

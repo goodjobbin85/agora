@@ -1,0 +1,11 @@
+<h3 align="center">Categories of Services | <%= link_to "Home", root_path %></h3> 
+
+<ul align="center">
+    <% @services.each do |service| %>
+        <li>
+            <p>
+                <%= link_to service.name, "#" %>
+            </p>
+        </li>
+    <% end %>
+</ul>
