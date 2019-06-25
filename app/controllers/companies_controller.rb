@@ -14,11 +14,11 @@ class CompaniesController < ApplicationController
     
     def create 
         @company = Company.new(company_params)
-        @company.save
         if @company.save
             flash[:success] = "Company successfully added"
             redirect_to companies_path
         else
+            flash[:danger] = "Woops! Try again!"
             render :new
         end
     end 

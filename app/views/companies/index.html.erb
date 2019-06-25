@@ -1,4 +1,4 @@
-<h3 align="center">All Businesses | <%= link_to "Add New Business", new_company_path %> 
+<h3 align="center">All Businesses | <%= link_to "Add New Business", new_company_path %> | <%= link_to "Home", root_path %></h3>
                                    
 
 <div align="center">
@@ -6,6 +6,5 @@
         <p>
             <%= link_to company.name, company_path(company) %> | <%= company.phone %> | <%= company.email %>
         </p>
-        
     <% end %>
 </div>

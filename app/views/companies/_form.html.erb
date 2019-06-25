@@ -1,5 +1,15 @@
 <div align="center">
     <%= form_for @company do |f| %>
+        <div>
+            <% if @company.errors.any? %>
+                <h4><%= pluralize(@company.errors.count, "error") %> prevented this from saving</h4>
+                <ul>
+                    <%= @company.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                <ul>
+            <% end %> 
+        </div>
         <p>
             <%= f.label :name %>
             <%= f.text_field :name %>
@@ -23,6 +33,11 @@
         <p>
             <%= f.label :year_established %>
             <%= f.text_field :year_established %>
+        </p>
+        
+        <p>
+            <%= f.label :service %>
+            <%= f.text_field :service %>
         </p>
         
         <p>
