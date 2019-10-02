@@ -1,10 +1,10 @@
-<h3 align="center">All Businesses | <%= link_to "Add New Business", new_company_path %> | <%= link_to "Home", root_path %></h3>
+<h3 align="center">All Businesses | <%= link_to "Add New Business", new_service_company_path %> | <%= link_to "Home", root_path %></h3>
                                    
 
 <div align="center">
     <% @companies.each do |company| %>
         <p>
-            <%= link_to company.name, company_path(company) %> | <%= company.phone %> | <%= company.email %>
+            <%= link_to company.name, service_company_path(company) %> | <%= company.phone %> | <%= company.email %>
         </p>
     <% end %>
 </div>

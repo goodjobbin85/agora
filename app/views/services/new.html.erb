@@ -1,0 +1,8 @@
+<h2 align="center">Add New Service</h2>
+
+<%= form_for @service do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <%= f.submit %>
+<% end %>

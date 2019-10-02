@@ -4,7 +4,7 @@
     <% @services.each do |service| %>
         <li>
             <p>
-                <%= link_to service.name, "#" %>
+                <%= link_to service.name, service_companies_path(:service_id, :company_id) %>
             </p>
         </li>
     <% end %>
